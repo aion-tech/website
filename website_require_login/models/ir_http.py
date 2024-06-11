@@ -32,6 +32,7 @@ class IrHttp(models.AbstractModel):
             # also /web/login, /web/assets, /web/image and others
             # are needed to correctly render the login page
             "/web",
+            "/website/translations",
         ]
 
     @classmethod
