@@ -68,4 +68,8 @@ class TestIrHttp(HttpCase):
         # Assert
         for requested_path, expected_redirected_path in redirection_path_map.items():
             response = self.url_open(requested_path)
+            self.assertEqual(
+                response.status_code,
+                200,
+            )
             self.assertTrue(response.url.endswith(expected_redirected_path))
